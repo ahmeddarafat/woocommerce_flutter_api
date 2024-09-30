@@ -5,16 +5,16 @@ class WooProductCategoryImage {
   int? id;
 
   /// The date the image was created, in the site's timezone.
-  DateTime? dateCreated;
+  String? dateCreated;
 
   /// The date the image was created, as GMT
-  DateTime? dateCreatedGmt;
+  String? dateCreatedGmt;
 
   /// The date the image was last modified, in the site's timezone.
-  DateTime? dateModified;
+  String? dateModified;
 
   /// The date the image was last modified, as GMT.
-  DateTime? dateModifiedGmt;
+  String? dateModifiedGmt;
 
   /// Image URL.
   String? src;
@@ -61,10 +61,10 @@ class WooProductCategoryImage {
 
   factory WooProductCategoryImage.fake() => WooProductCategoryImage(
         id: FakeHelper.integer(),
-        dateCreated: FakeHelper.datetime(),
-        dateCreatedGmt: FakeHelper.datetime(),
-        dateModified: FakeHelper.datetime(),
-        dateModifiedGmt: FakeHelper.datetime(),
+        dateCreated: FakeHelper.datetime().timeZoneName,
+        dateCreatedGmt: FakeHelper.datetime().timeZoneName,
+        dateModified: FakeHelper.datetime().timeZoneName,
+        dateModifiedGmt: FakeHelper.datetime().timeZoneName,
         src: FakeHelper.image(),
         name: FakeHelper.word(),
         alt: FakeHelper.word(),

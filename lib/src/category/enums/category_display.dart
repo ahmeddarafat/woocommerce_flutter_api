@@ -25,4 +25,19 @@ enum WooCategoryDisplay {
     }
     return WooCategoryDisplay.default_;
   }
+
+  static String toStringText(WooCategoryDisplay type) {
+    switch (type) {
+      case WooCategoryDisplay.default_:
+        return 'default';
+      case WooCategoryDisplay.products:
+        return 'products';
+      case WooCategoryDisplay.subcategories:
+        return 'subcategories';
+      case WooCategoryDisplay.both:
+        return 'both';
+      default:
+        return 'default';
+    }
+  }
 }

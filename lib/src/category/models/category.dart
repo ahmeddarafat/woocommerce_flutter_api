@@ -20,8 +20,10 @@ class WooProductCategory {
   /// HTML description of the resource.
   String? description;
 
-  /// Category archive display type. Options: default, products, subcategories and both. Default is default.
-  WooCategoryDisplay? display;
+  
+  /// Old: Category archive display type. Options: default, products, subcategories and both. Default is default.
+  /// New: Category archive display type as String
+  String? display;
 
   /// Image data.
   WooProductCategoryImage? image;
@@ -91,7 +93,7 @@ class WooProductCategory {
         slug: FakeHelper.word(),
         parent: FakeHelper.integer(),
         description: FakeHelper.sentence(),
-        display: WooCategoryDisplay.fake(),
+        display: WooCategoryDisplay.toStringText(WooCategoryDisplay.fake()),
         image: WooProductCategoryImage.fake(),
         menuOrder: FakeHelper.integer(),
         count: FakeHelper.integer(),
